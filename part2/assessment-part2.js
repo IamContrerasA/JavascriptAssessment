@@ -174,3 +174,26 @@ function forgetter(name){
 // NOTE: Neither hunger nor danger should be able to exceed 100 or drop below 0.
 
 // CODE HERE...
+
+function frodo(startingHungerValue, startingDangerValue){
+  return {
+    dinnerOverFire(){
+      if(startingDangerValue - 25 >= 0 && startingDangerValue + 40 <= 100){
+        return {
+          hunger: startingHungerValue -= 25,
+          danger: startingDangerValue += 40
+        }
+      }
+      return {hunger: 0, danger: 100}
+    },
+    hidingInBush(){
+      if(startingDangerValue + 35 <= 100 && startingDangerValue - 20 >= 0){
+        return {
+          hunger: startingHungerValue += 35,
+          danger: startingDangerValue -= 20
+        }
+      }
+      return {hunger: 100, danger: 0}
+    }
+  }
+}
