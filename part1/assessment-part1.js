@@ -166,3 +166,9 @@ function valueType(a, b){
 var theAnswer = "Unknown";
 
 // CODE HERE...
+
+function promiseCatcher(promise){
+  promise.then(function(result){
+    theAnswer = result;
+  });
+}
