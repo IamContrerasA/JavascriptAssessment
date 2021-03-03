@@ -141,7 +141,13 @@ function accountingOffice(assets){
 
 // CODE HERE...
 
-
+function forgetter(name){
+  let myObject = {name: name, remember: []}
+  return function rememberall(item){
+    myObject.remember.push(item);
+    return myObject
+  }
+}
 
 // *************
 // * PROBLEM 6 *
