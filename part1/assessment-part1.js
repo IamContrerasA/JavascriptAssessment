@@ -115,7 +115,22 @@ mustang.drive();
 // Your method may be passed punctuation, numbers or other non-letter characters
 // and should neither modify them nor break when encountering them.
 
-
+String.prototype.grammarPolice = function() {
+  sentence = Object.values(this);
+  let isSpace = false;
+  newSentence = sentence.map((s, index) => {
+    if(index === 0 || isSpace){
+      isSpace = false;
+      return s.toUpperCase();;
+    }
+    if(s === ' '){
+      isSpace = true;
+      return s;
+    }
+    return s.toLowerCase();;
+  });
+  return newSentence.join('');
+}
 
 
 // CODE HERE...
