@@ -95,7 +95,9 @@ const boundToElephant = large.bind(elephant);
 
 // CODE HERE...
 
-
+function deathStar(capacity, crew){
+  return capacity.bind(crew);
+}
 
 // *************
 // * PROBLEM 4 *
