@@ -75,3 +75,17 @@ function promiseMe($q){
 // and then resolve the array as you complete your promise.
 
 // CODE HERE...
+
+function emailList($q, $http){
+
+  return $http({
+    method: 'GET',
+    url: '/api/users'
+  }).then((response) => {
+    const myArray = [];
+    response.data.forEach((r) => {
+      myArray.push(r.email)
+    });
+    return myArray;
+  });
+}
