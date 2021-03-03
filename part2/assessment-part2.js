@@ -112,7 +112,11 @@ function deathStar(capacity, crew){
 
 // CODE HERE...
 
-
+function accountingOffice(assets){
+  return function(liabilities){
+    return assets + liabilities;
+  }
+}
 
 // *************
 // * PROBLEM 5 *
