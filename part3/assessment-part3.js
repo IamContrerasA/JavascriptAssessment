@@ -53,7 +53,14 @@ var foo;
 
 // CODE HERE...
 
-
+function promiseMe($q){
+  return new Promise(function(resolve){
+    setTimeout(function(){
+      foo = 'bar';
+      resolve(foo);
+    }, 20);
+  });
+}
 
 // *************
 // * PROBLEM 4 *
