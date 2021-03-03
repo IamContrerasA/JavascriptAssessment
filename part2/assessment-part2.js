@@ -81,7 +81,7 @@ function large() {
 }
 // CODE HERE...
 
-
+const boundToElephant = large.bind(elephant);
 
 // *************
 // * PROBLEM 3 *
