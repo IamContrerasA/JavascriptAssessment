@@ -115,6 +115,8 @@ mustang.drive();
 // Your method may be passed punctuation, numbers or other non-letter characters
 // and should neither modify them nor break when encountering them.
 
+// CODE HERE...
+
 String.prototype.grammarPolice = function() {
   sentence = Object.values(this);
   let isSpace = false;
@@ -132,11 +134,6 @@ String.prototype.grammarPolice = function() {
   return newSentence.join('');
 }
 
-
-// CODE HERE...
-
-
-
 // *************
 // * PROBLEM 4 *
 // *************
@@ -153,7 +150,9 @@ String.prototype.grammarPolice = function() {
 
 // CODE HERE...
 
-
+function valueType(a, b){
+  return a === b ? 'Exactly the same' : a == b ? "Same value, different types" : "Different values"
+}
 
 // *************
 // * PROBLEM 5 *
