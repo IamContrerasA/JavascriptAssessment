@@ -38,11 +38,17 @@ var firstUser = 'don\'t touch this string!';
 var thirdUser = 'don\'t touch this string, either!';
 
 function noWeakLink() {
-
+  let results;
   return $http({
     method: 'GET',
     url: '/api/users'
-  })
+  }).then( response => {
+    firstUser = response.data[0];
+    results = response;
+  }).then(() => {
+    thirdUser = results.data[2];
+    return results.data[9];
+  });
   // CODE HERE...
 
 }
