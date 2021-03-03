@@ -31,7 +31,9 @@ function callBinding(magicAnimals, updateAnimal, id){
 
 // CODE HERE...
 
-
+function applyBinding(magicAnimals, updateAnimal, id){
+  return updateAnimal.apply(magicAnimals[id - 1], ['being majestic', 'eating rainbows'])
+}
 
 // *************
 // * PROBLEM 3 *
