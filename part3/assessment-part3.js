@@ -14,7 +14,9 @@
 
 // CODE HERE...
 
-
+function callBinding(magicAnimals, updateAnimal, id){
+  return updateAnimal.call(magicAnimals[id - 1], 'Trogdor');
+}
 
 // *************
 // * PROBLEM 2 *
